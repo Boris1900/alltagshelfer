@@ -15,13 +15,16 @@ Bewusst NICHT im Menü der Hauptseite verlinkt und technisch komplett losgelöst
 
 | Werkzeug | Ziel-Link | Barriere |
 |---|---|---|
-| Tinnitus-Tester | `tester.tinnituspraxis-seedorf.de` | keine (war schon offen) |
+| Tinnitus-Tester | `tester.tinnituspraxis-seedorf.de?ref=alltagshelfer` | keine (war schon offen). Der Parameter blendet dort zusätzlich das untere Kompass-E-Mail-Formular aus, siehe unten |
 | Tinnitus-Kompass | `tinnitus-kompass.pdf` (liegt im Repo) | keine (Original nur per E-Mail über Quentn erreichbar, hier direkt) |
 | Tinnitus Tracker App | `app.tinnituspraxis-seedorf.de/download.html` | keine (führt NICHT auf die E-Mail-Landingpage `index.html` des Tracker-Projekts) |
 | Ohreninsel | `ohreninsel.tinnituspraxis-seedorf.de/download` | keine (war schon offen) |
 
 ## Design
 Übernommen von der bestehenden `/tinnitus-selbsthilfe`-Seite: Logo, vier Icons (als JPG/PNG heruntergeladen, liegen im Repo), Grün `#7ed957`, Hintergrund `#ece9e1`, Schrift Open Sans. Gleiches Kartenschema wie bei Tester/Tracker (weiße Card, abgerundet, Schatten).
+
+## Kompass-Formular auf der Tester-Seite ausgeblendet (27.07.2026)
+Katharinas Einwand: Wer über diese Seite zum Tester geht, hat den Kompass hier schon als Direktlink. Auf der Tester-Seite selbst hängt aber unten weiterhin das Quentn-Formular für denselben Kompass, das wirkt doppelt/verwirrend. Lösung ohne zweite Tester-Kopie: `tester.tinnituspraxis-seedorf.de` erkennt den URL-Parameter `?ref=alltagshelfer` und blendet den Formular-Bereich dann aus (Änderung im Tester-Repo, siehe dessen CLAUDE.md Punkt 5). Ohne den Parameter bleibt der Tester für alle anderen Besucher unverändert die Lead-Generierungs-Seite.
 
 ## Bekannter offener Punkt: Kompass-Link beim Tester
 Die CLAUDE.md des Tester-Projekts (`Tinnitustester Webseite`) behauptet, das Kompass-PDF liege dort öffentlich unter `tester.tinnituspraxis-seedorf.de/tinnitus-kompass.pdf`. Stimmt nicht (404, geprüft 27.07.2026), das PDF war nie im Tester-Repo. Hier bewusst umgangen, indem das PDF direkt in diesem Repo liegt. Der Fehler im Tester-Projekt selbst ist NICHT behoben, nur hier nicht relevant.
