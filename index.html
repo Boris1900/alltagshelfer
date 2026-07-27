@@ -33,21 +33,27 @@ body {
 @media (min-width:620px) { .grid { grid-template-columns:1fr 1fr; } }
 
 .card {
-  background:#fff; border:1px solid #e4ede1; border-radius:20px; padding:26px 22px;
-  display:flex; flex-direction:column; gap:14px; text-decoration:none; color:inherit;
+  background:#fff; border:1px solid #e4ede1; border-radius:20px; padding:20px 22px;
+  display:flex; flex-direction:row; align-items:center; gap:20px; text-decoration:none; color:inherit;
   box-shadow:0 6px 20px rgba(92,122,92,0.08);
   transition:transform .12s, box-shadow .12s;
 }
 .card:hover, .card:active { transform:translateY(-2px); box-shadow:0 10px 28px rgba(92,122,92,0.14); }
 
-.icon-badge { width:64px; height:64px; border-radius:50%; background:rgba(126,217,87,0.16); display:flex; align-items:center; justify-content:center; overflow:hidden; flex-shrink:0; align-self:center; }
+.icon-badge { width:92px; height:92px; border-radius:50%; background:rgba(126,217,87,0.16); display:flex; align-items:center; justify-content:center; overflow:hidden; flex-shrink:0; }
 .icon-badge img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
 
-.card h2 { font-size:17px; color:#2f4a2f; font-weight:700; margin-bottom:4px; }
-.card p { font-size:13.5px; color:#5a7a5a; line-height:1.55; flex-grow:1; }
+.card-text { display:flex; flex-direction:column; gap:8px; flex:1; min-width:0; }
+.card h2 { font-size:17px; color:#2f4a2f; font-weight:700; }
+.card p { font-size:13.5px; color:#5a7a5a; line-height:1.5; }
 
-.cta { display:inline-flex; align-items:center; gap:6px; background:#7ed957; color:#1f351f; font-size:13.5px; font-weight:700; padding:11px 18px; border-radius:12px; align-self:flex-start; }
+.cta { display:inline-flex; align-items:center; gap:6px; background:#7ed957; color:#1f351f; font-size:13.5px; font-weight:700; padding:10px 16px; border-radius:12px; align-self:flex-start; }
 .cta::after { content:"→"; }
+
+@media (max-width:400px) {
+  .icon-badge { width:76px; height:76px; }
+  .card { gap:14px; padding:18px; }
+}
 
 footer { margin-top:36px; font-size:12px; color:#8fa08f; text-align:center; }
 footer a { color:#8fa08f; }
@@ -67,38 +73,38 @@ footer a { color:#8fa08f; }
 
     <a class="card" href="https://tester.tinnituspraxis-seedorf.de">
       <div class="icon-badge"><img src="icon-tester.jpg" alt="Tinnitus-Tester"></div>
-      <div>
+      <div class="card-text">
         <h2>Tinnitus-Tester</h2>
         <p>Bilde deinen eigenen Tinnitusklang nach. Direkt im Browser.</p>
+        <span class="cta">Zum Tester</span>
       </div>
-      <span class="cta">Zum Tester</span>
     </a>
 
     <a class="card" href="tinnitus-kompass.pdf" target="_blank">
       <div class="icon-badge"><img src="icon-kompass.jpg" alt="Tinnitus-Kompass"></div>
-      <div>
+      <div class="card-text">
         <h2>Tinnitus-Kompass</h2>
         <p>PDF-Leitfaden: Ursachen einordnen, erste Übungen mitnehmen.</p>
+        <span class="cta">PDF öffnen</span>
       </div>
-      <span class="cta">PDF öffnen</span>
     </a>
 
     <a class="card" href="https://app.tinnituspraxis-seedorf.de/download.html">
       <div class="icon-badge"><img src="icon-tracker.png" alt="Tinnitus Tracker App"></div>
-      <div>
+      <div class="card-text">
         <h2>Tinnitus Tracker App</h2>
         <p>Tinnitus-Verlauf verfolgen, Muster erkennen. Für iPhone und Android.</p>
+        <span class="cta">Zur App</span>
       </div>
-      <span class="cta">Zur App</span>
     </a>
 
     <a class="card" href="https://ohreninsel.tinnituspraxis-seedorf.de/download">
       <div class="icon-badge"><img src="icon-ohreninsel.png" alt="Ohreninsel"></div>
-      <div>
+      <div class="card-text">
         <h2>Ohreninsel</h2>
         <p>Naturklänge, die den Tinnitus in den Hintergrund schieben.</p>
+        <span class="cta">Zur App</span>
       </div>
-      <span class="cta">Zur App</span>
     </a>
 
   </div>
