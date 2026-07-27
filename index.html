@@ -4,27 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alltagshelfer – Tinnituspraxis Seedorf</title>
-<meta name="description" content="Kostenfreie Werkzeuge für Ihren Tinnitus-Alltag: Tinnitus-Tester, Tinnitus-Kompass, Tinnitus Tracker und Ohreninsel. Direkt nutzbar, ohne Anmeldung.">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Kostenfreie Werkzeuge für deinen Tinnitus-Alltag: Tinnitus-Tester, Tinnitus-Kompass, Tinnitus Tracker und Ohreninsel. Direkt nutzbar, ohne Anmeldung.">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Open Sans',sans-serif; background:#ece9e1; color:#2c3c2c; min-height:100vh; display:flex; flex-direction:column; align-items:center; }
-.wrap { width:100%; max-width:520px; padding:32px 20px 48px; }
+body {
+  font-family:'Open Sans',sans-serif;
+  color:#2c3c2c;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(126,217,87,0.16) 0%, rgba(126,217,87,0) 45%),
+    radial-gradient(circle at 100% 20%, rgba(126,217,87,0.12) 0%, rgba(126,217,87,0) 40%),
+    #fbfcfa;
+  display:flex; flex-direction:column; align-items:center;
+}
+.wrap { width:100%; max-width:760px; padding:48px 24px 56px; }
 
-.header { display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom:28px; }
-.header img { width:64px; height:64px; object-fit:contain; margin-bottom:10px; }
-.header h1 { font-size:22px; color:#3d5c3d; margin-bottom:6px; }
-.header p { font-size:14px; color:#5a7a5a; line-height:1.6; max-width:400px; }
+.header { display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom:40px; }
+.header img { width:72px; height:72px; object-fit:contain; margin-bottom:14px; }
+.header h1 { font-size:28px; font-weight:800; color:#2f4a2f; margin-bottom:10px; letter-spacing:-.01em; }
+.header p { font-size:15px; color:#5a7a5a; line-height:1.6; max-width:440px; }
 
-.card { background:#fff; border-radius:16px; padding:20px; margin-bottom:16px; box-shadow:0 4px 24px rgba(92,122,92,0.12); display:flex; align-items:center; gap:16px; text-decoration:none; color:inherit; transition:transform .1s; }
-.card:active { transform:scale(0.98); }
-.card img { width:64px; height:64px; border-radius:12px; object-fit:cover; flex-shrink:0; }
-.card-text h2 { font-size:16px; color:#3d5c3d; margin-bottom:4px; }
-.card-text p { font-size:13px; color:#5a7a5a; line-height:1.5; }
-.card-text .cta { display:inline-block; margin-top:8px; font-size:13px; font-weight:700; color:#3d5c3d; }
-.card-text .cta::after { content:" →"; }
+.grid { display:grid; grid-template-columns:1fr; gap:18px; }
+@media (min-width:620px) { .grid { grid-template-columns:1fr 1fr; } }
 
-footer { margin-top:12px; font-size:11px; color:#8fa08f; text-align:center; }
+.card {
+  background:#fff; border:1px solid #e4ede1; border-radius:20px; padding:26px 22px;
+  display:flex; flex-direction:column; gap:14px; text-decoration:none; color:inherit;
+  box-shadow:0 6px 20px rgba(92,122,92,0.08);
+  transition:transform .12s, box-shadow .12s;
+}
+.card:hover, .card:active { transform:translateY(-2px); box-shadow:0 10px 28px rgba(92,122,92,0.14); }
+
+.icon-badge { width:64px; height:64px; border-radius:50%; background:rgba(126,217,87,0.16); display:flex; align-items:center; justify-content:center; overflow:hidden; flex-shrink:0; }
+.icon-badge img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+
+.card h2 { font-size:17px; color:#2f4a2f; font-weight:700; margin-bottom:4px; }
+.card p { font-size:13.5px; color:#5a7a5a; line-height:1.55; flex-grow:1; }
+
+.cta { display:inline-flex; align-items:center; gap:6px; background:#7ed957; color:#1f351f; font-size:13.5px; font-weight:700; padding:11px 18px; border-radius:12px; align-self:flex-start; }
+.cta::after { content:"→"; }
+
+footer { margin-top:36px; font-size:12px; color:#8fa08f; text-align:center; }
 footer a { color:#8fa08f; }
 </style>
 </head>
@@ -33,45 +54,49 @@ footer a { color:#8fa08f; }
 
   <div class="header">
     <img src="logo.png" alt="Tinnituspraxis Seedorf">
-    <h1>Ihre Alltagshelfer</h1>
+    <h1>Erholung für deine Ohren – deine Alltagshelfer</h1>
     <p>Vier kostenfreie Werkzeuge aus unserer Praxis. Direkt nutzbar, keine Anmeldung nötig.</p>
   </div>
 
-  <a class="card" href="https://tester.tinnituspraxis-seedorf.de">
-    <img src="icon-tester.jpg" alt="Tinnitus-Tester">
-    <div class="card-text">
-      <h2>Tinnitus-Tester</h2>
-      <p>Bilden Sie Ihren eigenen Tinnitusklang nach. Direkt im Browser.</p>
+  <div class="grid">
+
+    <a class="card" href="https://tester.tinnituspraxis-seedorf.de">
+      <div class="icon-badge"><img src="icon-tester.jpg" alt="Tinnitus-Tester"></div>
+      <div>
+        <h2>Tinnitus-Tester</h2>
+        <p>Bilde deinen eigenen Tinnitusklang nach. Direkt im Browser.</p>
+      </div>
       <span class="cta">Zum Tester</span>
-    </div>
-  </a>
+    </a>
 
-  <a class="card" href="tinnitus-kompass.pdf" target="_blank">
-    <img src="icon-kompass.jpg" alt="Tinnitus-Kompass">
-    <div class="card-text">
-      <h2>Tinnitus-Kompass</h2>
-      <p>PDF-Leitfaden: Ursachen einordnen, erste Übungen mitnehmen.</p>
+    <a class="card" href="tinnitus-kompass.pdf" target="_blank">
+      <div class="icon-badge"><img src="icon-kompass.jpg" alt="Tinnitus-Kompass"></div>
+      <div>
+        <h2>Tinnitus-Kompass</h2>
+        <p>PDF-Leitfaden: Ursachen einordnen, erste Übungen mitnehmen.</p>
+      </div>
       <span class="cta">PDF öffnen</span>
-    </div>
-  </a>
+    </a>
 
-  <a class="card" href="https://app.tinnituspraxis-seedorf.de/download.html">
-    <img src="icon-tracker.png" alt="Tinnitus Tracker App">
-    <div class="card-text">
-      <h2>Tinnitus Tracker App</h2>
-      <p>Tinnitus-Verlauf verfolgen, Muster erkennen. Für iPhone und Android.</p>
+    <a class="card" href="https://app.tinnituspraxis-seedorf.de/download.html">
+      <div class="icon-badge"><img src="icon-tracker.png" alt="Tinnitus Tracker App"></div>
+      <div>
+        <h2>Tinnitus Tracker App</h2>
+        <p>Tinnitus-Verlauf verfolgen, Muster erkennen. Für iPhone und Android.</p>
+      </div>
       <span class="cta">Zur App</span>
-    </div>
-  </a>
+    </a>
 
-  <a class="card" href="https://ohreninsel.tinnituspraxis-seedorf.de/download">
-    <img src="icon-ohreninsel.png" alt="Ohreninsel">
-    <div class="card-text">
-      <h2>Ohreninsel</h2>
-      <p>Naturklänge, die den Tinnitus in den Hintergrund schieben.</p>
+    <a class="card" href="https://ohreninsel.tinnituspraxis-seedorf.de/download">
+      <div class="icon-badge"><img src="icon-ohreninsel.png" alt="Ohreninsel"></div>
+      <div>
+        <h2>Ohreninsel</h2>
+        <p>Naturklänge, die den Tinnitus in den Hintergrund schieben.</p>
+      </div>
       <span class="cta">Zur App</span>
-    </div>
-  </a>
+    </a>
+
+  </div>
 
   <footer>
     Tinnituspraxis Seedorf ·
